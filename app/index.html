@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List App</title>
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <h1><center>Shopping List</center></h1>
+    <div id="list"></div>
+</body>
+<script>                                                             
+    $.get('/list', function (res) {     //res is an array of our items
+        console.log('list= ', res);
+        $('#list').text(res.join(', '));    //Set the text of #list to concatenated items Array
+    });
+</script>
+</html>
+
+<!--Going to add jQuery code, code.jquery.com > copy minified code and paste inside script tags above
+    call back function-->
+
